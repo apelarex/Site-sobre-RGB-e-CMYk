@@ -1,137 +1,34 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelos Aditivo e Subtrativo de Cores</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        section {
-            margin: 20px;
-        }
-        h1, h2 {
-            color: #4CAF50;
-        }
-        .content {
-            background-color: white;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .example {
-            margin-top: 20px;
-            text-align: center;
-        }
-        .example div {
-            width: 150px;
-            height: 150px;
-            margin: 10px;
-            display: inline-block;
-        }
-        .red { background-color: red; }
-        .green { background-color: green; }
-        .blue { background-color: blue; }
-        .yellow { background-color: yellow; }
-        .cyan { background-color: cyan; }
-        .magenta { background-color: magenta; }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+    <title>RGB vs CMYK - Entenda as Diferenças</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<header>
-    <h1>Modelos Aditivo e Subtrativo de Cores</h1>
-    <p>Entenda como as cores funcionam em telas e impressoras!</p>
-</header>
-
-<section>
-    <div class="content">
-        <h2>O que é o Modelo Aditivo de Cores?</h2>
-        <p>
-            O modelo aditivo de cores é utilizado em sistemas de luz, como televisores e monitores de computador. Ele combina as três cores primárias de luz: <strong>vermelho</strong>, <strong>verde</strong> e <strong>azul</strong> (RGB). A mistura dessas cores em diferentes intensidades cria outras cores, sendo o branco o resultado da combinação máxima de todas elas.
-        </p>
+    <div class="container">
+        <h1>RGB vs CMYK - Entenda as Diferenças</h1>
+        
+        <h2>O que é RGB?</h2>
+        <p>RGB é um modelo de cores aditivo baseado na combinação de três cores primárias: Vermelho (Red), Verde (Green) e Azul (Blue). Esse modelo é usado em dispositivos eletrônicos, como monitores e televisões.</p>
+        <img src="rgb_example.jpg" alt="Exemplo de Cores RGB">
+        
+        <h2>O Modelo Aditivo</h2>
+        <p>No modelo aditivo, a luz emitida por cada pixel combina-se para formar outras cores. Os pixels das telas possuem subpixels de RGB, e a intensidade de cada cor determina a cor final exibida.</p>
+        <img src="rgb_pixels.jpg" alt="Funcionamento dos Pixels RGB">
+        
+        <h2>O que é CMYK?</h2>
+        <p>CMYK é um modelo de cores subtrativo utilizado em impressão. Ele se baseia na mistura dos pigmentos Ciano (Cyan), Magenta (Magenta), Amarelo (Yellow) e Preto (Key). A cor preta é usada para gerar contraste e reduzir desperdício de tinta.</p>
+        <img src="cmyk_example.jpg" alt="Exemplo de Cores CMYK">
+        
+        <h2>O Modelo Subtrativo</h2>
+        <p>No modelo subtrativo, a luz refletida sobre os pigmentos determina a cor percebida. A combinação do ciano, magenta e amarelo pode formar diversas cores, mas a adição do preto melhora o contraste.</p>
+        <img src="cmyk_printing.jpg" alt="Mistura de Cores CMYK na Impressão">
+        
+        <h2>Comparação entre RGB e CMYK</h2>
+        <p>Enquanto o modelo RGB é usado para telas e depende da luz emitida, o modelo CMYK é usado para impressão e depende da luz refletida. RGB é um modelo aditivo que combina cores para formar branco, enquanto CMYK é subtrativo e combina cores para formar preto.</p>
+        <img src="rgb_vs_cmyk.jpg" alt="Diferença entre RGB e CMYK">
     </div>
-</section>
-
-<section>
-    <div class="content">
-        <h2>Como Funcionam os Pixels nas Telas?</h2>
-        <p>
-            As telas modernas, como as de computadores, smartphones e TVs, são compostas por milhões de pequenos elementos chamados <strong>pixels</strong>. Cada pixel é formado por três subpixels: um vermelho, um verde e um azul. Esses subpixels emitem luz em diferentes intensidades para formar a cor que vemos na tela. 
-        </p>
-        <p>
-            Quando a intensidade de cada subpixel é ajustada, os diferentes valores de vermelho, verde e azul se combinam para formar a cor final que o olho humano percebe. Por exemplo:
-            <ul>
-                <li><strong>Subpixel vermelho aceso e verde apagado = cor vermelha.</strong></li>
-                <li><strong>Subpixel verde aceso e azul apagado = cor verde.</strong></li>
-                <li><strong>Subpixel azul aceso e vermelho apagado = cor azul.</strong></li>
-            </ul>
-        </p>
-        <p>
-            Esse processo é chamado de <strong>síntese aditiva</strong>, porque as cores são criadas pela adição de luz de diferentes comprimentos de onda. Quanto maior a intensidade da luz, mais próxima a cor fica de branco.
-        </p>
-    </div>
-</section>
-
-<section>
-    <div class="content">
-        <h2>O Modelo Subtrativo de Cores</h2>
-        <p>
-            O modelo subtrativo de cores é usado em processos de impressão, como em impressoras a jato de tinta. Ele é baseado na mistura de pigmentos. As cores primárias desse modelo são <strong>ciano</strong>, <strong>magenta</strong> e <strong>amarelo</strong> (CMY). 
-        </p>
-        <p>
-            Quando os pigmentos são misturados, eles "subtraem" luz do espectro visível, ou seja, eles absorvem certos comprimentos de onda de luz e refletem outros. Por exemplo:
-            <ul>
-                <li><strong>Ciano + Magenta = Azul</strong></li>
-                <li><strong>Magenta + Amarelo = Vermelho</strong></li>
-                <li><strong>Amarelo + Ciano = Verde</strong></li>
-            </ul>
-        </p>
-        <p>
-            No entanto, o modelo subtrativo não pode gerar cores muito saturadas apenas com as três cores primárias. Por isso, o pigmento preto (K) é adicionado à mistura (sistema CMYK), para melhorar o contraste e economizar tinta. O preto é usado para criar sombras e detalhes que as cores primárias sozinhas não conseguem representar.
-        </p>
-    </div>
-</section>
-
-<section>
-    <div class="content">
-        <h2>Comparando os Modelos: Aditivo x Subtrativo</h2>
-        <p>
-            A principal diferença entre os modelos aditivo e subtrativo é o modo como as cores são criadas:
-        </p>
-        <ul>
-            <li><strong>Aditivo (RGB):</strong> Usado em telas, onde as cores são formadas pela adição de luzes coloridas (vermelho, verde e azul). A combinação máxima de todas as cores resulta em branco.</li>
-            <li><strong>Subtrativo (CMYK):</strong> Usado na impressão, onde as cores são formadas pela mistura de pigmentos que absorvem (subtraem) a luz. A combinação de ciano, magenta e amarelo cria uma gama de cores, e o preto é adicionado para melhorar o contraste e a qualidade da impressão.</li>
-        </ul>
-        <p>
-            Resumindo: O modelo aditivo é perfeito para dispositivos que emitem luz, como telas, enquanto o modelo subtrativo é usado em sistemas que dependem de pigmentos, como impressoras.
-        </p>
-    </div>
-</section>
-
-<footer>
-    <p>&copy; 2025 Modelos Aditivo e Subtrativo de Cores</p>
-</footer>
-
 </body>
 </html>
